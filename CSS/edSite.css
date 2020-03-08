@@ -1,7 +1,6 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    /*border: 5px solid black;*/
 }
 
 main{
@@ -104,8 +103,9 @@ main{
     text-align: center;
 }
 main h1{
-    margin-top: 50px;
+    margin: 75px 0 20px 0;
     color:#96858F;;
+    width: 500px;
     border: 2px dotted #D7CEC7;
     border-radius: 5px;
     display:inline-block;
@@ -120,6 +120,8 @@ main h1{
 
 a:hover{
    background-color: #D7CEC7;
+    border-radius:5px;
+    height: 100%;
     opacity: 2;
 }
 
@@ -182,3 +184,4 @@ img:hover{
     border-top: 1px solid #ccc;
     font-size: 0.8em;
 }
+
