@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .block-example{
+            color:white;
+            background-color: #E6ECF0;
+            height: 300px;
+            width:350px;
+            padding: 100px;
+            margin-bottom: 10px;
+
+        }
+        .block-example-2{
+            color:white;
+            background-color: rgba(25, 105, 178, 0.47);
+            width: 200px;
+            height: 270px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .block-example-3{
+            background-color: #1969B2;
+
+        }
+
+        em{
+            border: 2px solid cornsilk;
+            height: 1100px;
+            width: 1000px;
+        }
+
+        .css-guidelines-specifications {
+            border: 2px dotted #6f8056;
+            color: #835599;
+            height: 500px;
+            display:block;
+
+
+        }
+
+        .block-example-outside-div{
+            border: 2px dotted black;
+            background-color:#ffcf1a;
+            height: 400px;
+            width: 50%;
+            font-weight: bold;
+        }
+
+        .nav{
+            background-color: #af9a9c;
+            color: white;
+            padding: 20px;
+            list-style:none;
+            text-align:center;
+        }
+
+        .nav li{
+            display:inline-block;
+            font-size: 15px;
+            padding: 5px;
+            margin: 10px;
+
+        }
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+<div class="block-example">
+    <div class="padding">This is my div tag. I am a container for the next two div elements. Inspect me and see why Elements are positioned in towards the center of the light blue container box. Did you see its because of the padding? If you didn't, thats okay. I am a block element but I am "restricted" to stay in the middle of this light blue box because of the padding that was written in the css style portion.
+    </div>
+
+    <div class="block-example-2">
+        A block element always starts on a new line, and fills up the horizontal space left and right on the web page. You can add margins and padding on all four sides of any block element — top, right, left, and bottom. <em>Starting from the italics with the cream colored border, I am an inline element. If you inspect me, you will see that I have a huge height and width but I am still in the line and the new height and width had no affect on me!</em>
+    </div>
+
+    <div class="css-guidelines-specifications">In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block. The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse. In a block formatting context, each box's left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch). Since I am a div inside another div "container" and my vertical height is running into other elements (like the p-tag box and the line of text.)  This is because my height is set to 500px which is alot longer than it should be. I can change the height and the width to something smaller so it will not run into the other elements.  </div>
+</div>
+<div class="outside-container">
+
+<div class="block-example-outside-div"> I am now outside the div container. I am now a block element that is expanded through the entire span of the page. I can change the height and the width. The current width is set at 50%. Try going into the inspector and change the css style coding to 100% and see what happens. How about 20%? The following lines are the same lines from the div that is inside the div container. [ In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block. The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse. In a block formatting context, each box's left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch). Since I am a div inside another div "container" and my vertical height is running into other elements (like the p-tag box and the line of text.)  This is because my height is set to 500px which is alot longer than it should be. I can change the height and the width to something smaller so it will not run into the other elements.]  </div>
+</div>
+
+</div>
+<p class="block-example-3">This is my p tag</p>
+
+<div class="inline-block">
+    An element set to inline-block is very similar to inline in that it will set inline with the natural flow of text (on the "baseline"). The difference is that you are able to set a width and height which will be respected.
+<ul class="nav">
+    <li> Home </li>
+    <li> About Us </li>
+    <li> Clients </li>
+    <li> Contacts </li>
+</ul>
+</div>
+
+</body>
+</html>
