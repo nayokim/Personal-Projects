@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    --bg-top: #d6d6d6;
+    --bg-numbers: #e0e0e0;
+    --bg-operators: #f69330;
+
+}
+
+.wrapper {
+    display: inline-block;
+    padding: 8px;
+    box-shadow: 0 0 15px gray;
+    border-radius: 5px;
+    margin: 50px;
+
+}
+
+.container {
+    height: 325px;
+    width: 235px;
+    display: grid;
+    border-radius: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    margin: 0;
+
+}
+
+
+.screen {
+    grid-column: 1 /span 5;
+    grid-row: 1/ span 2;
+    background-color: #4C4C49;
+
+
+}
+
+main div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid #a1a1a1;
+    font-size: 1.5em;
+    font-family: 'Roboto', SansSerif;
+}
+
+.ac {
+    grid-column: 1/ span 1;
+    grid-row: 3/span 1;
+    display: flex;
+    background-color: var(--bg-top);
+}
+
+.neg-and-pos {
+    grid-column: 2/ span 1;
+    grid-row: 3/span 1;
+    background-color: var(--bg-top);
+
+}
+
+.percent {
+    grid-column: 3 / span 1;
+    grid-row: 3/span 1;
+    background-color: var(--bg-top);
+
+}
+
+.divide {
+    grid-column: 4/ span 1;
+    grid-row: 3/ span 1;
+    background-color: var(--bg-operators);
+    color: white;
+
+}
+
+.seven {
+    grid-column: 1/ span 1;
+    grid-row: 4/ span 1;
+    background-color: var(--bg-numbers);
+
+}
+
+.eight {
+    grid-column: 2/ span 1;
+    grid-row: 4/ span 1;
+    background-color: var(--bg-numbers);
+
+}
+
+.nine {
+    grid-column: 3/ span 1;
+    grid-row: 4/ span 1;
+    background-color: var(--bg-numbers);
+
+}
+
+.multiply {
+    grid-column: 4/ span 1;
+    grid-row: 4/ span 1;
+    background-color: var(--bg-operators);
+    color: white;
+
+}
+
+.four {
+    grid-column: 1/ span 1;
+    grid-row: 5/ span 1;
+    background-color: var(--bg-numbers);
+
+}
+
+.five {
+    grid-column: 2/ span 1;
+    grid-row: 5/ span 1;
+    background-color: var(--bg-numbers);
+
+}
+
+.six {
+    grid-column: 3/ span 1;
+    grid-row: 5/ span 1;
+    background-color: var(--bg-numbers);
+
+}
+
+.minus {
+    grid-column: 4/ span 1;
+    grid-row: 5/ span 1;
+    background-color: var(--bg-operators);
+    color: white;
+}
+
+.one {
+    grid-column: 1/ span 1;
+    grid-row: 6/ span 1;
+    background-color: var(--bg-numbers);
+
+}
+
+.two {
+    grid-column: 2/ span 1;
+    grid-row: 6/ span 1;
+    background-color: var(--bg-numbers);
+
+}
+
+.three {
+    grid-column: 3/ span 1;
+    grid-row: 6/ span 1;
+    background-color: var(--bg-numbers);
+
+}
+
+.plus {
+    grid-column: 4/ span 1;
+    grid-row: 6/ span 1;
+    background-color: var(--bg-operators);
+    color: white;
+
+}
+
+.zero {
+    grid-column: 1/ span 2;
+    grid-row: 7/ span 1;
+    background-color: var(--bg-numbers);
+
+}
+
+.period {
+    grid-column: 3/ span 1;
+    grid-row: 7/ span 1;
+    background-color: var(--bg-numbers);
+
+}
+
+.equal {
+    grid-column: 4/ span 1;
+    grid-row: 7/ span 1;
+    background-color: var(--bg-operators);
+    color: white;
+
+}

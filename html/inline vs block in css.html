@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        *{
+        }
+
+        body{
+            border: 10px solid darkslateblue;
+        }
         .block-example{
             color:white;
             background-color: #E6ECF0;
@@ -20,11 +26,11 @@
             height: 270px;
             padding: 10px;
             margin: 10px;
+            position: relative;
         }
 
         .block-example-3{
             background-color: #1969B2;
-
         }
 
         em{
@@ -34,20 +40,32 @@
         }
 
         .css-guidelines-specifications {
-            border: 2px dotted #6f8056;
+            /*border: 2px dotted #6f8056;*/
             color: #835599;
+            font-weight: bolder;
             height: 500px;
             display:block;
+            width:100%;
+            position:relative;
+        }
 
+        .css-guidelines-specifications:hover{
+         color: #ffcf1a;
 
         }
 
         .block-example-outside-div{
             border: 2px dotted black;
             background-color:#ffcf1a;
+            color:#ffcf1a;
             height: 400px;
-            width: 50%;
+            width: 100%;
             font-weight: bold;
+
+        }
+
+        .block-example-outside-div:hover{
+            color:black;
         }
 
         .nav{
@@ -84,12 +102,15 @@
     <div class="block-example-2">
         A block element always starts on a new line, and fills up the horizontal space left and right on the web page. You can add margins and padding on all four sides of any block element — top, right, left, and bottom. <em>Starting from the italics with the cream colored border, I am an inline element. If you inspect me, you will see that I have a huge height and width but I am still in the line and the new height and width had no affect on me!</em>
     </div>
-
+<br>
+    <br>
+    <br>
+    <br>
     <div class="css-guidelines-specifications">In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block. The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse. In a block formatting context, each box's left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch). Since I am a div inside another div "container" and my vertical height is running into other elements (like the p-tag box and the line of text.)  This is because my height is set to 500px which is alot longer than it should be. I can change the height and the width to something smaller so it will not run into the other elements.  </div>
 </div>
 <div class="outside-container">
 
-<div class="block-example-outside-div"> I am now outside the div container. I am now a block element that is expanded through the entire span of the page. I can change the height and the width. The current width is set at 50%. Try going into the inspector and change the css style coding to 100% and see what happens. How about 20%? The following lines are the same lines from the div that is inside the div container. [ In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block. The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse. In a block formatting context, each box's left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch). Since I am a div inside another div "container" and my vertical height is running into other elements (like the p-tag box and the line of text.)  This is because my height is set to 500px which is alot longer than it should be. I can change the height and the width to something smaller so it will not run into the other elements.]  </div>
+<div class="block-example-outside-div"> I am now outside the div container. I am now a block element that is expanded through the entire span of the page. I can change the height and the width. The current width is set at 1000%. Try going into the inspector and change the css style coding to 50% and see what happens. How about 20%? The following lines are the same lines from the div that is inside the div container. [ In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block. The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse. In a block formatting context, each box's left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch). Since I am a div inside another div "container" and my vertical height is running into other elements (like the p-tag box and the line of text.)  This is because my height is set to 500px which is alot longer than it should be. I can change the height and the width to something smaller so it will not run into the other elements.]  </div>
 </div>
 
 </div>
