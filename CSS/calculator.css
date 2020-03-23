@@ -10,6 +10,15 @@ body {
 
 }
 
+main div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid #a1a1a1;
+    font-size: 1.5em;
+    font-family: 'Roboto', SansSerif;
+}
+
 .wrapper {
     display: inline-block;
     padding: 8px;
@@ -30,6 +39,16 @@ body {
 
 }
 
+.numbers{
+    background-color: var(--bg-numbers);
+
+}
+
+.operaters{
+    background-color: var(--bg-operators);
+    color: white;
+}
+
 
 .screen {
     grid-column: 1 /span 5;
@@ -39,14 +58,7 @@ body {
 
 }
 
-main div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0.5px solid #a1a1a1;
-    font-size: 1.5em;
-    font-family: 'Roboto', SansSerif;
-}
+
 
 .ac {
     grid-column: 1/ span 1;
@@ -72,115 +84,83 @@ main div {
 .divide {
     grid-column: 4/ span 1;
     grid-row: 3/ span 1;
-    background-color: var(--bg-operators);
-    color: white;
 
 }
 
 .seven {
     grid-column: 1/ span 1;
     grid-row: 4/ span 1;
-    background-color: var(--bg-numbers);
 
 }
 
 .eight {
     grid-column: 2/ span 1;
     grid-row: 4/ span 1;
-    background-color: var(--bg-numbers);
 
 }
 
 .nine {
     grid-column: 3/ span 1;
     grid-row: 4/ span 1;
-    background-color: var(--bg-numbers);
 
 }
 
 .multiply {
     grid-column: 4/ span 1;
     grid-row: 4/ span 1;
-    background-color: var(--bg-operators);
-    color: white;
-
 }
 
 .four {
     grid-column: 1/ span 1;
     grid-row: 5/ span 1;
-    background-color: var(--bg-numbers);
-
 }
 
 .five {
     grid-column: 2/ span 1;
     grid-row: 5/ span 1;
-    background-color: var(--bg-numbers);
-
 }
 
 .six {
     grid-column: 3/ span 1;
     grid-row: 5/ span 1;
-    background-color: var(--bg-numbers);
-
 }
 
 .minus {
     grid-column: 4/ span 1;
     grid-row: 5/ span 1;
-    background-color: var(--bg-operators);
-    color: white;
 }
 
 .one {
     grid-column: 1/ span 1;
     grid-row: 6/ span 1;
-    background-color: var(--bg-numbers);
-
 }
 
 .two {
     grid-column: 2/ span 1;
     grid-row: 6/ span 1;
-    background-color: var(--bg-numbers);
-
 }
 
 .three {
     grid-column: 3/ span 1;
     grid-row: 6/ span 1;
-    background-color: var(--bg-numbers);
-
 }
 
 .plus {
     grid-column: 4/ span 1;
     grid-row: 6/ span 1;
-    background-color: var(--bg-operators);
-    color: white;
-
 }
 
 .zero {
     grid-column: 1/ span 2;
     grid-row: 7/ span 1;
-    background-color: var(--bg-numbers);
-
 }
 
 .period {
     grid-column: 3/ span 1;
     grid-row: 7/ span 1;
-    background-color: var(--bg-numbers);
-
 }
 
 .equal {
     grid-column: 4/ span 1;
     grid-row: 7/ span 1;
-    background-color: var(--bg-operators);
-    color: white;
-
 }
