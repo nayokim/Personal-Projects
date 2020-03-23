@@ -10,12 +10,12 @@ body {
 
 }
 
-main div {
+main .container{
     display: flex;
     justify-content: center;
     align-items: center;
     border: 0.5px solid #a1a1a1;
-    font-size: 1.5em;
+    font-size: 2em;
     font-family: 'Roboto', SansSerif;
 }
 
@@ -38,13 +38,16 @@ main div {
     margin: 0;
 
 }
+.top-row{
+    background-color: var(--bg-top);
+}
 
 .numbers{
     background-color: var(--bg-numbers);
 
 }
 
-.operaters{
+.operators{
     background-color: var(--bg-operators);
     color: white;
 }
@@ -54,8 +57,6 @@ main div {
     grid-column: 1 /span 5;
     grid-row: 1/ span 2;
     background-color: #4C4C49;
-
-
 }
 
 
@@ -63,7 +64,6 @@ main div {
 .ac {
     grid-column: 1/ span 1;
     grid-row: 3/span 1;
-    display: flex;
     background-color: var(--bg-top);
 }
 
