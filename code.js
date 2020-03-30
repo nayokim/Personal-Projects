@@ -132,30 +132,45 @@
 // Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i].
 
 
-function largestOfFour(arr) {
-    var largestArray =[];
-    for (var i = 0; i < arr.length; i++){
-            console.log('the largest number in this array is: ' + Math.max(...arr[i]));
-            largestArray.push(Math.max(...arr[i]));
-    }
-    return largestArray;
-
-}
-
-console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+// function largestOfFour(arr) {
+//     var largestArray = [];
+//     for (var i = 0; i < arr.length; i++) {
+//         console.log('the largest number in this array is: ' + Math.max(...arr[i]));
+//         largestArray.push(Math.max(...arr[i]));
+//     }
+//     return largestArray;
+//
+// }
+//
+// console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
 
 //1. in each nested array, find the largest number  - loop through each nested array and return the largest number (Math.max?)
 //2. create a new array with largest number - push or splice
 //3.return new array
 
 
+// Confirm the Ending
+// Check if a string (first argument, str) ends with the given target string (second argument, target).
+//
+// This challenge can be solved with the .endsWith() method, which was introduced in ES2015. But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
+//
 
+function confirmEnding(str, target) {
+    if ((str.substring(str.length-1) === target)){
+        return true;
+    } else{
+        return false;
+    }
+}
 
+console.log(confirmEnding("Bastian", "n"));
+console.log(confirmEnding("edward", "g"));
+console.log(confirmEnding("edward", "ward"));
 
+//1. if the last character of the string is the same character as the target, return true. //
+//2. if it does not end with the same character, end with false
 
-
-
-
-
-
+// var string = "Nayoung";
+// var lastCharacter = (string.substring(string.length-1)); // this will get you the last character in your string
+// console.log(lastCharacter);
 
