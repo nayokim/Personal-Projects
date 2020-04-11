@@ -1,0 +1,72 @@
+/**{*/
+/*border: 1px solid red;*/
+/*}*/
+
+header{
+    border-bottom: 1px solid #22145e;
+    font-family: 'Lato', sans-serif;
+
+}
+body{
+    --bg-premeno-blue: #416ba9;
+    --bg-lateperi-darkblue: #22145e;
+    --bg-perimeno-yellow: #f6e0a5;
+    --bg-postmeno-pink: #ffb4ab;
+
+}
+
+a{
+    color: #22145E
+}
+
+
+
+/*.container{*/
+/*    border: 2px dotted blue;*/
+/*}*/
+
+
+a.navbar-brand{
+    font-family: 'Lato', sans-serif;
+    color: #22145E;
+}
+
+a.navbar{
+    background-color: #F0F7F7;
+}
+
+.navbar-links{
+    color: #22145E;
+    font-family: 'Lato', sans-serif;
+    margin-left: 10px;
+    margin-right: 50px;
+
+}
+
+.icons{
+    list-style: none;
+}
+
+.row{
+    border: 2px solid rebeccapurple;
+}
+
+
+.lotion{
+    margin: 5px;
+    padding: 16px;
+}
+
+.supplement{
+    margin: 5px 0;
+    padding: 16px;
+}
+
+.e-bundles{
+    margin-right: 5px;
+    padding: 16px;
+}
+
+.dots{
+    height: 8px;
+}

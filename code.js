@@ -392,28 +392,28 @@
 //     "Exercise 83"
 // );
 
-const books = [
-    {
-        title: "Genetic Algorithms and Machine Learning for Programmers",
-        price: 36.99,
-        author: "Frances Buontempo"
-    },
-    {
-        title: "The Visual Display of Quantitative Information",
-        price: 38.0,
-        author: "Edward Tufte"
-    },
-    {
-        title: "Practical Object-Oriented Design",
-        author: "Sandi Metz",
-        price: 30.47
-    },
-    {
-        title: "Weapons of Math Destruction",
-        author: "Cathy O'Neil",
-        price: 17.44
-    }
-];
+// const books = [
+//     {
+//         title: "Genetic Algorithms and Machine Learning for Programmers",
+//         price: 36.99,
+//         author: "Frances Buontempo"
+//     },
+//     {
+//         title: "The Visual Display of Quantitative Information",
+//         price: 38.0,
+//         author: "Edward Tufte"
+//     },
+//     {
+//         title: "Practical Object-Oriented Design",
+//         author: "Sandi Metz",
+//         price: 30.47
+//     },
+//     {
+//         title: "Weapons of Math Destruction",
+//         author: "Cathy O'Neil",
+//         price: 17.44
+//     }
+// ];
 
 // Exercise 94
 // Write a function called highestPriceBook that takes in the above defined array of objects "books" and returns the object containing the title, price, and author of the book with the highest priced book.
@@ -458,44 +458,41 @@ const books = [
 //         price: 17.44
 //     });
 
-const shoppingCart = {
-    tax: 0.08,
-    items: [
-        {
-            title: "orange juice",
-            price: 3.99,
-            quantity: 1
-        },
-        {
-            title: "rice",
-            price: 1.99,
-            quantity: 3
-        },
-        {
-            title: "beans",
-            price: 0.99,
-            quantity: 3
-        },
-        {
-            title: "chili sauce",
-            price: 2.99,
-            quantity: 1
-        },
-        {
-            title: "chocolate",
-            price: 0.75,
-            quantity: 9
-        }
-    ]
-};
+// const shoppingCart = {
+//     tax: 0.08,
+//     items: [
+//         {
+//             title: "orange juice",
+//             price: 3.99,
+//             quantity: 1
+//         },
+//         {
+//             title: "rice",
+//             price: 1.99,
+//             quantity: 3
+//         },
+//         {
+//             title: "beans",
+//             price: 0.99,
+//             quantity: 3
+//         },
+//         {
+//             title: "chili sauce",
+//             price: 2.99,
+//             quantity: 1
+//         },
+//         {
+//             title: "chocolate",
+//             price: 0.75,
+//             quantity: 9
+//         }
+//     ]
+// };
 // console.log(shoppingCart.items[0].quantity);
 // console.log(shoppingCart.items[1].quantity);
 // console.log(shoppingCart.items[2].quantity);
 // console.log(shoppingCart.items[3].quantity);
 // console.log(shoppingCart.items[4].quantity);
-
-
-
 
 
 // Exercise 97
@@ -513,13 +510,13 @@ const shoppingCart = {
 // This should return the sum of all of the quantities from each item type
 
 //
-function totalNumberOfItems(input) {
-    var totalCartQuantity = 0;
-    for (var i = 0; i < input.items.length; i++) {
-        totalCartQuantity += input.items[i].quantity;
-    }
-    return totalCartQuantity
-}
+// function totalNumberOfItems(input) {
+//     var totalCartQuantity = 0;
+//     for (var i = 0; i < input.items.length; i++) {
+//         totalCartQuantity += input.items[i].quantity;
+//     }
+//     return totalCartQuantity
+// }
 
 //
 // console.log(totalNumberOfItems(shoppingCart));
@@ -530,77 +527,108 @@ function totalNumberOfItems(input) {
 // Write a function named getAverageItemPrice that takes in the shopping cart as an input and returns the average of all the item prices.
 // Hint - This should determine the total price divided by the number of types of items. This does not account for each item type's quantity.\
 
-function getAverageItemPrice(input) {
-    var totalPrice = 0;
-    for (var i = 0; i < input.items.length; i++) {
-        totalPrice += input.items[i].price
-    }
-    return (totalPrice / input.items.length)
-}
+// function getAverageItemPrice(input) {
+//     var totalPrice = 0;
+//     for (var i = 0; i < input.items.length; i++) {
+//         totalPrice += input.items[i].price
+//     }
+//     return (totalPrice / input.items.length)
+// }
+//
+// console.log(getAverageItemPrice(shoppingCart), 2.1420000000000003, "Exercise 99");
+//
+//
+// // Exercise 100
+// // Write a function named getAverageSpentPerItem that takes in the shopping cart and returns the average of summing each item's quanties times that item's price.
+// // Hint: You may need to set an initial total price and total total quantity to zero, then sum up and divide that total price by the total quantity
+//
+//
+// function getAverageSpentPerItem(input) {
+//     //1. total number of items   - totalNumberOfItems(input)
+//     //2. total price of the item
+//     //3. total average (total price / total number)
+//
+//     // no loops
+//     // var totalPriceOrangeJuice = shoppingCart.items[0].quantity * shoppingCart.items[0].price;
+//     // console.log("Orange Juice total: " + totalPriceOrangeJuice);
+//     // var totalPriceRice = shoppingCart.items[1].quantity * shoppingCart.items[1].price;
+//     // console.log("Rice total: " + totalPriceRice);
+//     // var totalPriceBeans = shoppingCart.items[2].quantity * shoppingCart.items[2].price;
+//     // console.log("Bean total: " + totalPriceBeans);
+//     // var totalPriceChiliSauce =shoppingCart.items[3].quantity * shoppingCart.items[3].price;
+//     // console.log("chili sauce total: " + totalPriceChiliSauce);
+//     // var totalPriceChocolate =shoppingCart.items[4].quantity * shoppingCart.items[4].price;
+//     // console.log("chocolate total: " + totalPriceChocolate);
+//     //
+//     // var subTotal= (totalPriceChiliSauce + totalPriceRice + totalPriceOrangeJuice + totalPriceBeans + totalPriceChocolate);
+//     // console.log(subTotal/17);
+//
+//     var totalPrice = 0;
+//     for (var i = 0; i < input.items.length; i++) {
+//         totalPrice += (input.items[i].price) * (input.items[i].quantity);
+//     }
+//     return (totalPrice / totalNumberOfItems(input));
+// }
+//
+// console.log(getAverageSpentPerItem(shoppingCart), 1.333529411764706, "Exercise 100");
+//
+//
+// // Exercise 101
+// // Write a function named mostSpentOnItem that takes in the shopping cart as input and returns the object associated with the item that has the highest price*quantity.
+// // Be sure to do this as programmatically as possible.
+// // Hint: Similarly to how we sometimes begin a function with setting a variable to zero, we need a starting place:
+// // Hint: Consider creating a variable that is a object with the keys "price" and "quantity" both set to 0. You can then compare each item's price and quantity total to the one from "most"
+// function mostSpentOnItem(input){
+//     var mostExpensiveItem ={
+//         title: " ",
+//         price: 0,
+//         quantity: 0
+//     };
+//     for (var i = 0; i < input.items.length; i++){
+//         if (((input.items[i].price) * (input.items[i].quantity)) > ((mostExpensiveItem.price) * (mostExpensiveItem.quantity))){
+//             mostExpensiveItem = input.items[i];
+//         }
+//     }
+//     return mostExpensiveItem;
+//
+// }
+// console.log(
+//     mostSpentOnItem(shoppingCart),
+//     {
+//         title: "chocolate",
+//         price: 0.75,
+//         quantity: 9
+//     },
+//     "Exercise 101"
+// );
 
-console.log(getAverageItemPrice(shoppingCart), 2.1420000000000003, "Exercise 99");
-
-
-// Exercise 100
-// Write a function named getAverageSpentPerItem that takes in the shopping cart and returns the average of summing each item's quanties times that item's price.
-// Hint: You may need to set an initial total price and total total quantity to zero, then sum up and divide that total price by the total quantity
-
-
-function getAverageSpentPerItem(input) {
-    //1. total number of items   - totalNumberOfItems(input)
-    //2. total price of the item
-    //3. total average (total price / total number)
-
-    // no loops
-    // var totalPriceOrangeJuice = shoppingCart.items[0].quantity * shoppingCart.items[0].price;
-    // console.log("Orange Juice total: " + totalPriceOrangeJuice);
-    // var totalPriceRice = shoppingCart.items[1].quantity * shoppingCart.items[1].price;
-    // console.log("Rice total: " + totalPriceRice);
-    // var totalPriceBeans = shoppingCart.items[2].quantity * shoppingCart.items[2].price;
-    // console.log("Bean total: " + totalPriceBeans);
-    // var totalPriceChiliSauce =shoppingCart.items[3].quantity * shoppingCart.items[3].price;
-    // console.log("chili sauce total: " + totalPriceChiliSauce);
-    // var totalPriceChocolate =shoppingCart.items[4].quantity * shoppingCart.items[4].price;
-    // console.log("chocolate total: " + totalPriceChocolate);
-    //
-    // var subTotal= (totalPriceChiliSauce + totalPriceRice + totalPriceOrangeJuice + totalPriceBeans + totalPriceChocolate);
-    // console.log(subTotal/17);
-
-    var totalPrice = 0;
-    for (var i = 0; i < input.items.length; i++) {
-        totalPrice += (input.items[i].price) * (input.items[i].quantity);
-    }
-    return (totalPrice / totalNumberOfItems(input));
-}
-
-console.log(getAverageSpentPerItem(shoppingCart), 1.333529411764706, "Exercise 100");
-
-
-// Exercise 101
-// Write a function named mostSpentOnItem that takes in the shopping cart as input and returns the object associated with the item that has the highest price*quantity.
-// Be sure to do this as programmatically as possible.
-// Hint: Similarly to how we sometimes begin a function with setting a variable to zero, we need a starting place:
-// Hint: Consider creating a variable that is a object with the keys "price" and "quantity" both set to 0. You can then compare each item's price and quantity total to the one from "most"
-function mostSpentOnItem(input){
-    var mostExpensiveItem ={
-        title: " ",
-        price: 0,
-        quantity: 0
-    };
-    for (var i = 0; i < input.items.length; i++){
-        if (((input.items[i].price) * (input.items[i].quantity)) > ((mostExpensiveItem.price) * (mostExpensiveItem.quantity))){
-            mostExpensiveItem = input.items[i];
+function countVowels(str) {
+    var vowelList = 'aeiouAEIOU';
+    var vowelCount = 0;
+    for (var i = 0; i < str.length; i++) {
+        if (vowelList.indexOf(str[i]) !== -1) {
+            vowelCount++;
         }
     }
-    return mostExpensiveItem;
+    return vowelCount;
+}
+
+function convertNameToObject(str) {
+    var stringSplit = str.split(' ');
+    var arrayToObject = {firstName: stringSplit[0], lastName: stringSplit[1]};
+    return arrayToObject;
+}
+console.log(convertNameToObject("Harry Potter"));
+
+function analyzeWord(input) {
+
+    var arrayToObject = {
+        word: input,
+        numberOfLetters: input.length,
+        numberOfVowels:countVowels(input)
+    };
+    return arrayToObject;
 
 }
-console.log(
-    mostSpentOnItem(shoppingCart),
-    {
-        title: "chocolate",
-        price: 0.75,
-        quantity: 9
-    },
-    "Exercise 101"
-);
+
+    console.log(analyzeWord('codeup'));
