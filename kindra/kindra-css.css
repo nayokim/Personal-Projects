@@ -29,6 +29,7 @@ a{
 a.navbar-brand{
     font-family: 'Lato', sans-serif;
     color: #22145E;
+    font-size: 1.5em;
 }
 
 a.navbar{
@@ -45,6 +46,7 @@ a.navbar{
 
 .icons{
     list-style: none;
+
 }
 
 .row{
