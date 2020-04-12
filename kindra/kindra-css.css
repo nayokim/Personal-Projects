@@ -2,6 +2,17 @@
 /*border: 1px solid red;*/
 /*}*/
 
+
+
+/*body{*/
+/*    --bg-premeno-blue: #416ba9;*/
+/*    --bg-lateperi-darkblue: #22145e;*/
+/*    --bg-perimeno-yellow: #f6e0a5;*/
+/*    --bg-postmeno-coral: #ffb4ab;*/
+/*--bg-lotion-coral-pink: #e4cccb;*/
+
+/*}*/
+
 header {
     border-bottom: 1px solid #22145e;
     font-family: 'Lato', sans-serif;
@@ -16,44 +27,6 @@ header {
     color: #f6e0a5;
 }
 
-.footer-bottom-links {
-    border-top: 1px solid #22145e;
-    font-family: 'Lato', sans-serif;
-    overflow-x: hidden;
-}
-
-.footer-links{
-    color: #22145e;
-
-}
-
-.footer-links:hover{
-    color: #e4cccb;
-}
-
-.icon-link{
-    color: #e4cccb;
-}
-
-
-
-
-
-
-
-/*body{*/
-/*    --bg-premeno-blue: #416ba9;*/
-/*    --bg-lateperi-darkblue: #22145e;*/
-/*    --bg-perimeno-yellow: #f6e0a5;*/
-/*    --bg-postmeno-coral: #ffb4ab;*/
-/*--bg-lotion-coral-pink: #e4cccb;*/
-
-/*}*/
-
-
-/*.container{*/
-/*    border: 2px dotted blue;*/
-/*}*/
 
 
 a.navbar-brand {
@@ -84,13 +57,11 @@ a.navbar {
 
 .icons {
     list-style: none;
-
 }
 
-/*.row{*/
-/*    border: 2px solid rebeccapurple;*/
-/*}*/
-
+small{
+    font-size: 0.8em;
+}
 
 .lotion {
     margin: 5px;
@@ -109,4 +80,33 @@ a.navbar {
 
 .dots {
     height: 8px;
+}
+
+
+/*footer*/
+footer{
+    height:50px;
+}
+.footer-bottom-links {
+    border-top: 1px solid #22145e;
+    font-size: 0.8em;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+}
+
+.footer-links{
+    color: #22145e;
+
+}
+
+.footer-links:hover{
+    color: #e4cccb;
+}
+
+.icon-link{
+    color: #e4cccb;
+}
+
+.slogan{
+    font-size: 0.8em;
 }
