@@ -2,23 +2,53 @@
 /*border: 1px solid red;*/
 /*}*/
 
-header{
+header {
     border-bottom: 1px solid #22145e;
     font-family: 'Lato', sans-serif;
 
 }
-body{
-    --bg-premeno-blue: #416ba9;
-    --bg-lateperi-darkblue: #22145e;
-    --bg-perimeno-yellow: #f6e0a5;
-    --bg-postmeno-pink: #ffb4ab;
+
+.header-icon-links{
+    color: #22145e;
+}
+
+.header-icon-links:hover{
+    color: #f6e0a5;
+}
+
+.footer-bottom-links {
+    border-top: 1px solid #22145e;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+}
+
+.footer-links{
+    color: #22145e;
 
 }
 
-a{
-    color: #22145E
+.footer-links:hover{
+    color: #e4cccb;
 }
 
+.icon-link{
+    color: #e4cccb;
+}
+
+
+
+
+
+
+
+/*body{*/
+/*    --bg-premeno-blue: #416ba9;*/
+/*    --bg-lateperi-darkblue: #22145e;*/
+/*    --bg-perimeno-yellow: #f6e0a5;*/
+/*    --bg-postmeno-coral: #ffb4ab;*/
+/*--bg-lotion-coral-pink: #e4cccb;*/
+
+/*}*/
 
 
 /*.container{*/
@@ -26,17 +56,21 @@ a{
 /*}*/
 
 
-a.navbar-brand{
+a.navbar-brand {
     font-family: 'Lato', sans-serif;
     color: #22145E;
     font-size: 1.5em;
 }
 
-a.navbar{
+.navbar-brand:hover{
+    color: #f6e0a5;
+}
+
+a.navbar {
     background-color: #F0F7F7;
 }
 
-.navbar-links{
+.navbar-links {
     color: #22145E;
     font-family: 'Lato', sans-serif;
     margin-left: 10px;
@@ -44,31 +78,35 @@ a.navbar{
 
 }
 
-.icons{
+.navbar-links:hover{
+    color: #e4cccb;
+}
+
+.icons {
     list-style: none;
 
 }
 
-.row{
-    border: 2px solid rebeccapurple;
-}
+/*.row{*/
+/*    border: 2px solid rebeccapurple;*/
+/*}*/
 
 
-.lotion{
+.lotion {
     margin: 5px;
     padding: 16px;
 }
 
-.supplement{
+.supplement {
     margin: 5px 0;
     padding: 16px;
 }
 
-.e-bundles{
+.e-bundles {
     margin-right: 5px;
     padding: 16px;
 }
 
-.dots{
+.dots {
     height: 8px;
 }
