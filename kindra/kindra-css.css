@@ -3,7 +3,6 @@
 /*}*/
 
 
-
 /*body{*/
 /*    --bg-premeno-blue: #416ba9;*/
 /*    --bg-lateperi-darkblue: #22145e;*/
@@ -14,8 +13,9 @@
 /*}*/
 
 header {
-    border-bottom: 1px solid #22145e;
+    border-bottom: 1px solid lightgrey;
     font-family: 'Lato', sans-serif;
+
 
 }
 
@@ -24,14 +24,13 @@ body {
 
 }
 
-.header-icon-links{
+.header-icon-links {
     color: #22145e;
 }
 
-.header-icon-links:hover{
+.header-icon-links:hover {
     color: #f6e0a5;
 }
-
 
 
 a.navbar-brand {
@@ -40,7 +39,7 @@ a.navbar-brand {
     font-size: 1.5em;
 }
 
-.navbar-brand:hover{
+.navbar-brand:hover {
     color: #f6e0a5;
 }
 
@@ -56,7 +55,7 @@ a.navbar {
 
 }
 
-.navbar-links:hover{
+.navbar-links:hover {
     color: #e4cccb;
 }
 
@@ -64,7 +63,7 @@ a.navbar {
     list-style: none;
 }
 
-small{
+small {
     font-size: 0.8em;
 }
 
@@ -98,27 +97,46 @@ small{
 }
 
 h2 {
-
     position: absolute;
-    top: 200px;
+    top: 210px;
     left: 20px;
     width: 50%;
-    font-family:'Playfair Display';
+    font-family: 'Playfair Display';
 }
 
 .first-picture {
     position: absolute;
-    top: 240px;
+    top: 255px;
     left: 20px;
     width: 50%;
-    font-family:'Playfair Display';
+    font-family: 'Playfair Display';
 }
 
+.explore-products {
+    position: absolute;
+    top: 335px;
+    left: 20px;
+    background-color: #e4cccb;
+    border: 1px solid #e4cccb;
+    font-family: 'Playfair Display';
+}
+
+.menopause-must-haves {
+    height: 25%;
+    width: 25%;
+
+}
+
+/*.explore-products:hover{*/
+/*    background-color:  #ffb4ab;*/
+
+/*}*/
 
 /*footer*/
-footer{
-    height:50px;
+footer {
+    height: 50px;
 }
+
 .footer-bottom-links {
     border-top: 1px solid #22145e;
     font-size: 0.8em;
@@ -126,19 +144,19 @@ footer{
     overflow-x: hidden;
 }
 
-.footer-links{
+.footer-links {
     color: #22145e;
 
 }
 
-.footer-links:hover{
+.footer-links:hover {
     color: #e4cccb;
 }
 
-.icon-link{
+.icon-link {
     color: #e4cccb;
 }
 
-.slogan{
+.slogan {
     font-size: 0.8em;
 }
