@@ -11,27 +11,26 @@
 
 
 <div class="wrapper container buttons">
-        <textarea class="screen">0 </textarea>
-        <button type="button" class="btn top-row ac">AC</button>
-        <button type="button" class="btn top-row neg-and-pos"  data-action="add" >+/-</button>
-        <button type="button" class="btn top-row percent">%</button>
-        <button type="button" class="btn divide operators" data-action="divide" >&divide</button>
-        <button type="button" class="btn multiply operators"  data-action="multiply">&times</button>
-        <button type="button" class="btn minus operators" data-action="subtract">-</button>
-        <button type="button" class="btn plus operators">+</button>
-        <button type="button" class="btn equal operators">=</button>
-        <button type="button" class="btn one numbers">1</button>
-        <button type="button" class="btn two numbers">2</button>
-        <button type="button" class="btn three numbers">3</button>
-        <button type="button" class="btn four numbers">4</button>
-        <button type="button" class="btn five numbers">5</button>
-        <button type="button" class="btn six numbers">6</button>
-        <button type="button" class="btn seven numbers">7</button>
-        <button type="button" class="btn eight numbers">8</button>
-        <button type="button" class="btn nine numbers">9</button>
-        <button type="button" class="btn zero numbers">0</button>
-        <button type="button" class="btn period numbers">.</button>
-    </main>
+    <div id="current-value" class="item item-header">boobies</div>
+    <button class="btn top-row ac">AC</button>
+    <button class="btn top-row neg-and-pos" data-action="add">+/-</button>
+    <button class="btn top-row percent">%</button>
+    <button class="btn divide operators" data-action="divide">&divide</button>
+    <button class="btn multiply operators" data-action="multiply">&times</button>
+    <button class="btn minus operators" data-action="subtract">-</button>
+    <button class="btn plus operators">+</button>
+    <button class="btn equal operators">=</button>
+    <button class="btn one numbers">1</button>
+    <button class="btn two numbers">2</button>
+    <button class="btn three numbers">3</button>
+    <button class="btn four numbers">4</button>
+    <button class="btn five numbers">5</button>
+    <button class="btn six numbers">6</button>
+    <button class="btn seven numbers">7</button>
+    <button class="btn eight numbers">8</button>
+    <button class="btn nine numbers">9</button>
+    <button class="btn zero numbers">0</button>
+    <button class="btn period numbers">.</button>
 </div>
 
 
@@ -47,12 +46,11 @@
     //     console.log('you clicked a button')
     // });
 
-    $('.btn').click(function(event){
-        console.log('you clicked: ', this.innerHTML);
+    $('.btn').click(function (event) {
+        var thingClicked = this.innerHTML;
+        console.log('you clicked: ', thingClicked);
+        $('.item-header').html(thingClicked);
     })
-
-
-
 
 
 </script>
