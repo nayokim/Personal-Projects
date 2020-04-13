@@ -8,29 +8,53 @@
 </head>
 
 <body>
-<div class="wrapper">
-    <main class="container buttons">
-        <textarea class="screen"></textarea>
-        <button type="button" class="top-row ac">AC</button>
-        <button type="button" class="top-row neg-and-pos">+/-</button>
-        <button type="button" class="top-row percent">%</button>
-        <button type="button" class="divide operators">&divide</button>
-        <button type="button" class="multiply operators">&times</button>
-        <button type="button" class="minus operators">-</button>
-        <button type="button" class="plus operators">+</button>
-        <button type="button" class="equal operators">=</button>
-        <button type="button" class="one numbers">1</button>
-        <button type="button" class="two numbers">2</button>
-        <button type="button" class="three numbers">3</button>
-        <button type="button" class="four numbers">4</button>
-        <button type="button" class="five numbers">5</button>
-        <button type="button" class="six numbers">6</button>
-        <button type="button" class="seven numbers">7</button>
-        <button type="button" class="eight numbers">8</button>
-        <button type="button" class="nine numbers">9</button>
-        <button type="button" class="zero numbers">0</button>
-        <button type="button" class="period numbers">.</button>
+
+
+<div class="wrapper container buttons">
+        <textarea class="screen">0 </textarea>
+        <button type="button" class="btn top-row ac">AC</button>
+        <button type="button" class="btn top-row neg-and-pos"  data-action="add" >+/-</button>
+        <button type="button" class="btn top-row percent">%</button>
+        <button type="button" class="btn divide operators" data-action="divide" >&divide</button>
+        <button type="button" class="btn multiply operators"  data-action="multiply">&times</button>
+        <button type="button" class="btn minus operators" data-action="subtract">-</button>
+        <button type="button" class="btn plus operators">+</button>
+        <button type="button" class="btn equal operators">=</button>
+        <button type="button" class="btn one numbers">1</button>
+        <button type="button" class="btn two numbers">2</button>
+        <button type="button" class="btn three numbers">3</button>
+        <button type="button" class="btn four numbers">4</button>
+        <button type="button" class="btn five numbers">5</button>
+        <button type="button" class="btn six numbers">6</button>
+        <button type="button" class="btn seven numbers">7</button>
+        <button type="button" class="btn eight numbers">8</button>
+        <button type="button" class="btn nine numbers">9</button>
+        <button type="button" class="btn zero numbers">0</button>
+        <button type="button" class="btn period numbers">.</button>
     </main>
 </div>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+
+    // var calcButtons = document.querySelector('.buttons');
+    // console.log(calcButtons)
+
+    // calcButtons.addEventListener('click',function(){
+    //     console.log('you clicked a button')
+    // });
+
+    $('.btn').click(function(event){
+        console.log('you clicked: ', this.innerHTML);
+    })
+
+
+
+
+
+</script>
 </body>
 </html>
