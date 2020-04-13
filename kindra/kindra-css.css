@@ -19,6 +19,11 @@ header {
 
 }
 
+body {
+    font-family: 'Lato', sans-serif;
+
+}
+
 .header-icon-links{
     color: #22145e;
 }
@@ -80,6 +85,33 @@ small{
 
 .dots {
     height: 8px;
+}
+
+/*body*/
+
+/*img{*/
+/*    min-width: 100%;*/
+/*    min-height: 100%;*/
+/*}*/
+.image {
+    position: relative;
+}
+
+h2 {
+
+    position: absolute;
+    top: 200px;
+    left: 20px;
+    width: 50%;
+    font-family:'Playfair Display';
+}
+
+.first-picture {
+    position: absolute;
+    top: 240px;
+    left: 20px;
+    width: 50%;
+    font-family:'Playfair Display';
 }
 
 
