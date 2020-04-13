@@ -1,6 +1,6 @@
-*{
-border: 1px solid red;
-}
+/**{*/
+/*border: 1px solid red;*/
+/*}*/
 
 
 /*body{*/
@@ -121,6 +121,11 @@ h2 {
     font-family: 'Playfair Display';
 }
 
+
+.product-must-haves{
+    text-align:center;
+    display:block;
+}
 .menopause-must-haves {
     height: 25%;
     width: 25%;
