@@ -34,23 +34,37 @@
 </div>
 
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!--<script src="https://code.jquery.com/jquery-2.2.4.min.js"-->
+<!--        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>-->
 
 <script>
 
-    // var calcButtons = document.querySelector('.buttons');
-    // console.log(calcButtons)
+     var calcButtons = document.querySelector('.buttons');
+     // console.log(calcButtons);
 
-    // calcButtons.addEventListener('click',function(){
-    //     console.log('you clicked a button')
+     calcButtons.addEventListener('click',function(){
+         // console.log('you clicked a button');
+         // console.log(document.querySelector('button'));
+         // console.log(document.querySelector('.btn'));
+         // console.log(typeof(document.querySelector('.btn')));
+
+         var thingClicked= document.querySelectorAll('.btn');
+         // console.log('thingClicked', thingClicked);
+
+         for (var i = 0 ; i <thingClicked.length; i++){
+             console.log(thingClicked[i]);
+         }
+
+     });
+    //
+    // $('.btn').click(function (event) {
+    //     console.log(this);
+    //     var thingClicked = this.innerHTML;
+    //     console.log('you clicked: ', thingClicked);
+    //     $('#current-value').html(thingClicked);
     // });
 
-    $('.btn').click(function (event) {
-        var thingClicked = this.innerHTML;
-        console.log('you clicked: ', thingClicked);
-        $('#current-value').html(thingClicked);
-    })
+
 
 
 </script>
