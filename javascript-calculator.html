@@ -11,7 +11,7 @@
 
 
 <div class="wrapper container buttons">
-    <div id="current-value" class="item item-header">boobies</div>
+    <div id="current-value" class="item item-header">0</div>
     <button class="btn top-row ac">AC</button>
     <button class="btn top-row neg-and-pos" data-action="add">+/-</button>
     <button class="btn top-row percent">%</button>
@@ -49,7 +49,7 @@
     $('.btn').click(function (event) {
         var thingClicked = this.innerHTML;
         console.log('you clicked: ', thingClicked);
-        $('.item-header').html(thingClicked);
+        $('#current-value').html(thingClicked);
     })
 
 
