@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Ghibli App</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        /** {*/
+        /*    border: 1px solid blue*/
+        /*}*/
+
+        p{
+            font-size: 0.8em;
+        }
+        .card{
+            min-width: 300px;
+            min-height: 500px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+<h1 class="text-center">
+    Studio Ghibli Films
+</h1>
+
+<main class="container">
+    <div class="row row-1"></div>
+    <div class="row row-2 mt-4"></div>
+    <div class="row row-3 mt-4"></div>
+    <div class="row row-4 mt-4"></div>
+    <div class="row row-5 mt-4"></div>
+    <div class="row row-6 mt-4"></div>
+    <div class="row row-7 mt-4"></div>
+</main>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+<script>
+    "use strict";
+    $(document).ready(function () {
+        var $movie = $("#movie-title");
+        var $description = $("#description");
+        var url = "https://ghibliapi.herokuapp.com/films/";
+        //sending request to server
+        $.ajax(url, {
+            type: "GET"
+        }).done(function (data, index) {
+            // console.log(data);
+            // console.log(data[0].title);
+            // console.log(data[1].title);
+            for (let i = 0; i < 3; i++) {
+                console.log(data[i].title);
+                let movieTitleHTML = `
+                    <div class="col-sm-4">
+                        <div class="card">
+                             <div class="card-body pt-2">
+                                <h5 class="card-title">${data[i].title}</h5>
+                                 <p class="card-text">${data[i].description}</p>
+                                 <p class="card-text">Date released: ${data[i].release_date}</p>
+                                 <p class="card-text">Director: ${data[i].director}</p>
+                                 <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
+                              </div>
+                         </div>
+                    </div>`;
+                $('.row-1').append(movieTitleHTML);
+            }
+            for (let i = 3; i< 6; i++ ){
+                let movieTitleHTML = `
+                    <div class="col-sm-4">
+                        <div class="card">
+                             <div class="card-body pt-2">
+                                <h5 class="card-title">${data[i].title}</h5>
+                                 <p class="card-text">${data[i].description}</p>
+                                 <p class="card-text">Date released: ${data[i].release_date}</p>
+                                 <p class="card-text">Director: ${data[i].director}</p>
+                                 <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
+                              </div>
+                         </div>
+                    </div>`;
+                $('.row-2').append(movieTitleHTML);
+            }
+
+            for (let i = 6; i< 9; i++ ){
+                let movieTitleHTML = `
+                  <div class="col-sm-4">
+                        <div class="card">
+                             <div class="card-body pt-2">
+                                <h5 class="card-title">${data[i].title}</h5>
+                                 <p class="card-text">${data[i].description}</p>
+                                 <p class="card-text">Date released: ${data[i].release_date}</p>
+                                 <p class="card-text">Director: ${data[i].director}</p>
+                                 <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
+                              </div>
+                         </div>
+                    </div>`;
+                $('.row-3').append(movieTitleHTML);
+            }
+
+            for (let i = 9; i< 12; i++ ){
+                let movieTitleHTML = `
+                    <div class="col-sm-4">
+                        <div class="card">
+                             <div class="card-body pt-2">
+                                <h5 class="card-title">${data[i].title}</h5>
+                                 <p class="card-text">${data[i].description}</p>
+                                 <p class="card-text">Date released: ${data[i].release_date}</p>
+                                 <p class="card-text">Director: ${data[i].director}</p>
+                                 <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
+                              </div>
+                         </div>
+                    </div>`;
+                $('.row-4').append(movieTitleHTML);
+            }
+
+            for (let i =12; i< 15; i++ ){
+                let movieTitleHTML = `
+                    <div class="col-sm-4">
+                        <div class="card">
+                             <div class="card-body pt-2">
+                                <h5 class="card-title">${data[i].title}</h5>
+                                 <p class="card-text">${data[i].description}</p>
+                                 <p class="card-text">Date released: ${data[i].release_date}</p>
+                                 <p class="card-text">Director: ${data[i].director}</p>
+                                 <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
+                              </div>
+                         </div>
+                    </div>`;
+                $('.row-5').append(movieTitleHTML);
+            }
+
+            for (let i =15; i< 18; i++ ){
+                let movieTitleHTML = `
+                    <div class="col-sm-4">
+                        <div class="card">
+                             <div class="card-body pt-2">
+                                <h5 class="card-title">${data[i].title}</h5>
+                                 <p class="card-text">${data[i].description}</p>
+                                 <p class="card-text">Date released: ${data[i].release_date}</p>
+                                 <p class="card-text">Director: ${data[i].director}</p>
+                                 <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
+                              </div>
+                         </div>
+                    </div>`;
+                $('.row-6').append(movieTitleHTML);
+            }
+
+            for (let i =18; i< 20; i++ ){
+                let movieTitleHTML = `
+                    <div class="col-sm-4">
+                        <div class="card">
+                             <div class="card-body pt-2">
+                                <h5 class="card-title">${data[i].title}</h5>
+                                 <p class="card-text">${data[i].description}</p>
+                                 <p class="card-text">Date released: ${data[i].release_date}</p>
+                                 <p class="card-text">Director: ${data[i].director}</p>
+                                 <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
+                              </div>
+                         </div>
+                    </div>`;
+                $('.row-7').append(movieTitleHTML);
+            }
+        }).fail(function (error) {
+            console.error(error);
+        }).always(function () {
+            console.log('you always run once you get a response')
+        });
+    });
+
+
+</script>
+</body>
+</html>
