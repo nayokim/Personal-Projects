@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ghibli App</title>
+
+    <style>
+        /**{*/
+        /*    border: 1px dotted #cddeff;*/
+        /*}*/
+
+        .container{
+        }
+        .elements{
+            display: grid;
+            grid-gap: 1em;
+            margin-left: 150px;
+            height: 100vh;
+            width: 100vw;
+            grid-template-columns: 25% 25% 25% ;
+            overflow: no-display;
+        }
+        .card{
+            border: 1px solid black;
+            padding: 5px;
+            width: 270px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<main class="container">
+
+</main>
+
+<script>
+    "use strict";
+    const url = 'https://ghibliapi.herokuapp.com/films/';
+    fetch(url).then(response => response.json()
+        .then(data => {
+            let html = '<div class="elements">';
+            for (let info of data) {
+                html +=
+                    `<div class="card">`+
+                        `<h1>${info.title}</h1>` +
+                        `<p>${info.description}</p>`+
+                        `<p>Director: ${info.director}</p>` +
+                        `<p>Release date: ${info.release_date}</p>`+
+                        `<p>Rotten Tomato score: ${info.rt_score}</p>`+
+                     `</div>`
+            }
+            html += '</div>';
+            document.body.innerHTML = html;
+        })
+    )
+
+
+
+</script>
+
+</body>
+</html>
