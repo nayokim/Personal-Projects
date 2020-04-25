@@ -81,7 +81,20 @@
                     if (input === title0) {
                         console.log($('#search-term').val());
                         console.log(title0);
-                        $('body').append(title0)
+                        let movieTitleHTML = `
+                        <div class="col-sm-4">
+                             <div class="card">
+                                <div class="card-body pt-2">
+                                    <h5 class="card-title">${title0}</h5>
+                                     <p class="card-text">${data[i].description}</p>
+                                     <p class="card-text">Date released: ${data[i].release_date}</p>
+                                     <p class="card-text">Director: ${data[i].director}</p>
+                                     <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
+                                </div>
+                             </div>
+                        </div>`;
+                        $('.row-1').append(movieTitleHTML);
+
                     }
                 }
             }
