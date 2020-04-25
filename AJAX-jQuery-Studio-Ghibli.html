@@ -43,6 +43,7 @@
         </form>
     </div>
 
+    <div class="row row-search"></div>
     <div class="row row-1"></div>
     <div class="row row-2 mt-4"></div>
     <div class="row row-3 mt-4"></div>
@@ -68,160 +69,164 @@
     $(document).ready(function () {
         var url = "https://ghibliapi.herokuapp.com/films/";
         //sending request to server
-
         $.ajax(url, {
             type: "GET"
         }).done(function (data, index) {
+            //render html//
+                for (let i = 0; i < 3; i++) {
+                    let movieTitleHTML = `
+                                  <div class="col-sm-4">
+                                      <div class="card">
+                                           <div class="card-body pt-2">
+                                              <h5 class="card-title">${data[i].title}</h5>
+                                               <p class="card-text">${data[i].description}</p>
+                                               <p class="card-text">Date released: ${data[i].release_date}</p>
+                                               <p class="card-text">Director: ${data[i].director}</p>
+                                               <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
+                                            </div>
+                                       </div>
+                                  </div>`;
+                    $('.row-1').append(movieTitleHTML);
+                }
+
+            for (let i = 3; i < 6; i++) {
+                let movieTitleHTML = `
+                                      <div class="col-sm-4">
+                                          <div class="card">
+                                               <div class="card-body pt-2">
+                                                  <h5 class="card-title">${data[i].title}</h5>
+                                                   <p class="card-text">${data[i].description}</p>
+                                                   <p class="card-text">Date released: ${data[i].release_date}</p>
+                                                   <p class="card-text">Director: ${data[i].director}</p>
+                                                   <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
+                                                </div>
+                                           </div>
+                                      </div>`;
+                $('.row-2').append(movieTitleHTML);
+            }
+
+            for (let i = 6; i < 9; i++) {
+                let movieTitleHTML = `
+                                        <div class="col-sm-4">
+                                              <div class="card">
+                                                   <div class="card-body pt-2">
+                                                      <h5 class="card-title">${data[i].title}</h5>
+                                                       <p class="card-text">${data[i].description}</p>
+                                                       <p class="card-text">Date released: ${data[i].release_date}</p>
+                                                       <p class="card-text">Director: ${data[i].director}</p>
+                                                       <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
+                                                    </div>
+                                               </div>
+                                          </div>`;
+                $('.row-3').append(movieTitleHTML);
+            }
+
+            for (let i = 9; i < 12; i++) {
+                let movieTitleHTML = `
+                                      <div class="col-sm-4">
+                                          <div class="card">
+                                               <div class="card-body pt-2">
+                                                  <h5 class="card-title">${data[i].title}</h5>
+                                                   <p class="card-text">${data[i].description}</p>
+                                                   <p class="card-text">Date released: ${data[i].release_date}</p>
+                                                   <p class="card-text">Director: ${data[i].director}</p>
+                                                   <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
+                                                </div>
+                                           </div>
+                                      </div>`;
+                $('.row-4').append(movieTitleHTML);
+            }
+
+            for (let i = 12; i < 15; i++) {
+                let movieTitleHTML = `
+                                          <div class="col-sm-4">
+                                              <div class="card">
+                                                   <div class="card-body pt-2">
+                                                      <h5 class="card-title">${data[i].title}</h5>
+                                                       <p class="card-text">${data[i].description}</p>
+                                                       <p class="card-text">Date released: ${data[i].release_date}</p>
+                                                       <p class="card-text">Director: ${data[i].director}</p>
+                                                       <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
+                                                    </div>
+                                               </div>
+                                          </div>`;
+                $('.row-5').append(movieTitleHTML);
+            }
+
+            for (let i = 15; i < 18; i++) {
+                let movieTitleHTML = `
+                                      <div class="col-sm-4">
+                                          <div class="card">
+                                               <div class="card-body pt-2">
+                                                  <h5 class="card-title">${data[i].title}</h5>
+                                                   <p class="card-text">${data[i].description}</p>
+                                                   <p class="card-text">Date released: ${data[i].release_date}</p>
+                                                   <p class="card-text">Director: ${data[i].director}</p>
+                                                   <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
+                                                </div>
+                                           </div>
+                                      </div>`;
+                $('.row-6').append(movieTitleHTML);
+            }
+
+            for (let i = 18; i < 20; i++) {
+                let movieTitleHTML = `
+                                      <div class="col-sm-4">
+                                          <div class="card">
+                                               <div class="card-body pt-2">
+                                                  <h5 class="card-title">${data[i].title}</h5>
+                                                   <p class="card-text">${data[i].description}</p>
+                                                   <p class="card-text">Date released: ${data[i].release_date}</p>
+                                                   <p class="card-text">Director: ${data[i].director}</p>
+                                                   <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
+                                                </div>
+                                           </div>
+                                      </div>`;
+                $('.row-7').append(movieTitleHTML);
+            }
 
             function movieSearch(input) {
-
                 for (var i = 0; i < data.length; i++) {
                     let title0 = JSON.stringify(data[i].title);
                     let input = $('#search-term').val();
                     if (input === title0) {
                         console.log($('#search-term').val());
                         console.log(title0);
-                        let movieTitleHTML = `
-                        <div class="col-sm-4">
-                             <div class="card">
-                                <div class="card-body pt-2">
-                                    <h5 class="card-title">${title0}</h5>
-                                     <p class="card-text">${data[i].description}</p>
-                                     <p class="card-text">Date released: ${data[i].release_date}</p>
-                                     <p class="card-text">Director: ${data[i].director}</p>
-                                     <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
-                                </div>
-                             </div>
-                        </div>`;
-                        $('.row-1').append(movieTitleHTML);
+                        let movieSearchTitleHTML = `
+                            <div class="col-sm-4 mb-4">
+                                 <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${title0}</h5>
+                                         <p class="card-text">${data[i].description}</p>
+                                         <p class="card-text">Date released: ${data[i].release_date}</p>
+                                         <p class="card-text">Director: ${data[i].director}</p>
+                                         <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
+                                    </div>
+                                 </div>
+                            </div>`;
+                        $('.row-search').append(movieSearchTitleHTML);
 
                     }
                 }
             }
 
-
             $('#do-search').click(function (event) {
                 event.preventDefault();
                 (movieSearch("Castle in the Sky"));
             });
-            //   for (let i = 0; i < 3; i++) {
-            //       let movieTitleHTML = `
-            //   <div class="col-sm-4">
-            //       <div class="card">
-            //            <div class="card-body pt-2">
-            //               <h5 class="card-title">${data[i].title}</h5>
-            //                <p class="card-text">${data[i].description}</p>
-            //                <p class="card-text">Date released: ${data[i].release_date}</p>
-            //                <p class="card-text">Director: ${data[i].director}</p>
-            //                <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
-            //             </div>
-            //        </div>
-            //   </div>`;
-            //       $('.row-1').append(movieTitleHTML);
-            //   }
-            //   for (let i = 3; i < 6; i++) {
-            //       let movieTitleHTML = `
-            //   <div class="col-sm-4">
-            //       <div class="card">
-            //            <div class="card-body pt-2">
-            //               <h5 class="card-title">${data[i].title}</h5>
-            //                <p class="card-text">${data[i].description}</p>
-            //                <p class="card-text">Date released: ${data[i].release_date}</p>
-            //                <p class="card-text">Director: ${data[i].director}</p>
-            //                <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
-            //             </div>
-            //        </div>
-            //   </div>`;
-            //       $('.row-2').append(movieTitleHTML);
-            //   }
-            //
-            //   for (let i = 6; i < 9; i++) {
-            //       let movieTitleHTML = `
-            // <div class="col-sm-4">
-            //       <div class="card">
-            //            <div class="card-body pt-2">
-            //               <h5 class="card-title">${data[i].title}</h5>
-            //                <p class="card-text">${data[i].description}</p>
-            //                <p class="card-text">Date released: ${data[i].release_date}</p>
-            //                <p class="card-text">Director: ${data[i].director}</p>
-            //                <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
-            //             </div>
-            //        </div>
-            //   </div>`;
-            //       $('.row-3').append(movieTitleHTML);
-            //   }
-            //
-            //   for (let i = 9; i < 12; i++) {
-            //       let movieTitleHTML = `
-            //   <div class="col-sm-4">
-            //       <div class="card">
-            //            <div class="card-body pt-2">
-            //               <h5 class="card-title">${data[i].title}</h5>
-            //                <p class="card-text">${data[i].description}</p>
-            //                <p class="card-text">Date released: ${data[i].release_date}</p>
-            //                <p class="card-text">Director: ${data[i].director}</p>
-            //                <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
-            //             </div>
-            //        </div>
-            //   </div>`;
-            //       $('.row-4').append(movieTitleHTML);
-            //   }
-            //
-            //   for (let i = 12; i < 15; i++) {
-            //       let movieTitleHTML = `
-            //   <div class="col-sm-4">
-            //       <div class="card">
-            //            <div class="card-body pt-2">
-            //               <h5 class="card-title">${data[i].title}</h5>
-            //                <p class="card-text">${data[i].description}</p>
-            //                <p class="card-text">Date released: ${data[i].release_date}</p>
-            //                <p class="card-text">Director: ${data[i].director}</p>
-            //                <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
-            //             </div>
-            //        </div>
-            //   </div>`;
-            //       $('.row-5').append(movieTitleHTML);
-            //   }
-            //
-            //   for (let i = 15; i < 18; i++) {
-            //       let movieTitleHTML = `
-            //   <div class="col-sm-4">
-            //       <div class="card">
-            //            <div class="card-body pt-2">
-            //               <h5 class="card-title">${data[i].title}</h5>
-            //                <p class="card-text">${data[i].description}</p>
-            //                <p class="card-text">Date released: ${data[i].release_date}</p>
-            //                <p class="card-text">Director: ${data[i].director}</p>
-            //                <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
-            //             </div>
-            //        </div>
-            //   </div>`;
-            //       $('.row-6').append(movieTitleHTML);
-            //   }
-            //
-            //   for (let i = 18; i < 20; i++) {
-            //       let movieTitleHTML = `
-            //   <div class="col-sm-4">
-            //       <div class="card">
-            //            <div class="card-body pt-2">
-            //               <h5 class="card-title">${data[i].title}</h5>
-            //                <p class="card-text">${data[i].description}</p>
-            //                <p class="card-text">Date released: ${data[i].release_date}</p>
-            //                <p class="card-text">Director: ${data[i].director}</p>
-            //                <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
-            //             </div>
-            //        </div>
-            //   </div>`;
-            //       $('.row-7').append(movieTitleHTML);
-            //   }
         }).fail(function (error) {
             console.error(error);
         }).always(function () {
             console.log('you always run once you get a response')
         });
-
-
     });
+
+                // =================== end render html===============================//
+
+
+
+
+    // });
 
 
 </script>
