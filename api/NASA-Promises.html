@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NASA picture of the day</title>
+</head>
+<body>
+
+    <h1 id="planet-name"></h1>
+    <p id="date"></p>
+    <div id="planet-picture"></div>
+    <p id="caption"></p>
+
+<script src="keys.js"></script>
+<script>
+    "use strict";
+    const url = `https://api.nasa.gov/planetary/apod?api_key=${NASA_KEY}`;
+
+    fetch(url)
+        .then(response => response.json()
+            .then(data => {
+                console.log(data);
+                document.getElementById('date').innerHTML = data.date;
+                let planetName = data.title;
+                document.getElementById('planet-name').innerHTML = planetName;
+
+                let planetPicture = data.url;
+                document.getElementById('planet-picture').innerHTML =
+                    `<img src = ${planetPicture}>`;
+
+                let caption = data.explanation;
+                document.getElementById('caption').innerHTML = caption;
+            })
+        )
+</script>
+</body>
+</html>
