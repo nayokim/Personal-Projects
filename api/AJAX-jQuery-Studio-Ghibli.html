@@ -72,9 +72,42 @@
         $.ajax(url, {
             type: "GET"
         }).done(function (data, index) {
+
+            //using filter
+            function movieSearch(input) {
+                const movie = data.title;
+                data.filter(function (movie) {
+                        for (var i = 0; i < data.length; i++) {
+                            let title0 = JSON.stringify(data[i].title);
+                            let input = $('#search-term').val();
+                            let movieSearchTitleHTML;
+                            if (input === title0) {
+                                            let movieSearchTitleHTML = `
+                                                <div class="col-sm-4 mb-4">
+                                                     <div class="card">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">${title0}</h5>
+                                                             <p class="card-text">${data[i].description}</p>
+                                                             <p class="card-text">Date released: ${data[i].release_date}</p>
+                                                             <p class="card-text">Director: ${data[i].director}</p>
+                                                             <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
+                                                        </div>
+                                                     </div>
+                                                </div>`;
+                                $('.row-search').append(movieSearchTitleHTML);
+
+                        }
+
+                        }
+                    }
+                    )
+
+            }
+
+
             //render html//
-                for (let i = 0; i < 3; i++) {
-                    let movieTitleHTML = `
+            for (let i = 0; i < 3; i++) {
+                let movieTitleHTML = `
                                   <div class="col-sm-4">
                                       <div class="card">
                                            <div class="card-body pt-2">
@@ -86,8 +119,8 @@
                                             </div>
                                        </div>
                                   </div>`;
-                    $('.row-1').append(movieTitleHTML);
-                }
+                $('.row-1').append(movieTitleHTML);
+            }
 
             for (let i = 3; i < 6; i++) {
                 let movieTitleHTML = `
@@ -185,30 +218,31 @@
                 $('.row-7').append(movieTitleHTML);
             }
 
-            function movieSearch(input) {
-                for (var i = 0; i < data.length; i++) {
-                    let title0 = JSON.stringify(data[i].title);
-                    let input = $('#search-term').val();
-                    if (input === title0) {
-                        console.log($('#search-term').val());
-                        console.log(title0);
-                        let movieSearchTitleHTML = `
-                            <div class="col-sm-4 mb-4">
-                                 <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">${title0}</h5>
-                                         <p class="card-text">${data[i].description}</p>
-                                         <p class="card-text">Date released: ${data[i].release_date}</p>
-                                         <p class="card-text">Director: ${data[i].director}</p>
-                                         <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
-                                    </div>
-                                 </div>
-                            </div>`;
-                        $('.row-search').append(movieSearchTitleHTML);
+            // function movieSearch(input) {
+            //     for (var i = 0; i < data.length; i++) {
+            //         let title0 = JSON.stringify(data[i].title);
+            //         let input = $('#search-term').val();
+            //         if (input === title0) {
+            //             console.log($('#search-term').val());
+            //             console.log(title0);
+            //             let movieSearchTitleHTML = `
+            //                 <div class="col-sm-4 mb-4">
+            //                      <div class="card">
+            //                         <div class="card-body">
+            //                             <h5 class="card-title">${title0}</h5>
+            //                              <p class="card-text">${data[i].description}</p>
+            //                              <p class="card-text">Date released: ${data[i].release_date}</p>
+            //                              <p class="card-text">Director: ${data[i].director}</p>
+            //                              <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
+            //                         </div>
+            //                      </div>
+            //                 </div>`;
+            //             $('.row-search').append(movieSearchTitleHTML);
+            //
+            //         }
+            //     }
+            // }
 
-                    }
-                }
-            }
 
             $('#do-search').click(function (event) {
                 event.preventDefault();
@@ -221,9 +255,7 @@
         });
     });
 
-                // =================== end render html===============================//
-
-
+    // =================== end render html===============================//
 
 
     // });

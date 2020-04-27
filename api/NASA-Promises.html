@@ -31,7 +31,8 @@
                 let caption = data.explanation;
                 document.getElementById('caption').innerHTML = caption;
             })
-        )
+        ).catch(error => console.log(error));
+
 </script>
 </body>
 </html>
