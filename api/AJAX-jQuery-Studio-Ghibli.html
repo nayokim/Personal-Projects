@@ -72,42 +72,37 @@
         $.ajax(url, {
             type: "GET"
         }).done(function (data, index) {
+            console.log(data);
 
-            //using filter
-            function movieSearch(input) {
-                const movie = data.title;
-                data.filter(function (movie) {
-                        for (var i = 0; i < data.length; i++) {
-                            let title0 = JSON.stringify(data[i].title);
-                            let input = $('#search-term').val();
-                            let movieSearchTitleHTML;
-                            if (input === title0) {
-                                            let movieSearchTitleHTML = `
-                                                <div class="col-sm-4 mb-4">
-                                                     <div class="card">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title">${title0}</h5>
-                                                             <p class="card-text">${data[i].description}</p>
-                                                             <p class="card-text">Date released: ${data[i].release_date}</p>
-                                                             <p class="card-text">Director: ${data[i].director}</p>
-                                                             <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
-                                                        </div>
-                                                     </div>
-                                                </div>`;
-                                $('.row-search').append(movieSearchTitleHTML);
+            //use .map() to console.log array of movie titles
+            let movies = data.map(movies => movies.title);
+            console.log(movies);
 
-                        }
-
-                        }
-                    }
-                    )
-
-            }
+            // $('#search-term').on('keyup', function () {
+            //     var value = $(this).val();
+            //     console.log("value: ", value);
+            //     var data = searchTable(value, movies);
+            // });
+            //
+            // buildTable(movies);
+            //
+            // function searchTable(value, data) {
+            //     var filteredData = [];
+            //     for (var i = 0; i < data.length; i++) {
+            //         value = value.toLowerCase();
+            //         var name = movies.toLowerCase();
+            //         if (name.includes(value)) {
+            //             filteredData.push(movies)
+            //         }
+            //     }
+            //     return filteredData
+            // }
 
 
-            //render html//
-            for (let i = 0; i < 3; i++) {
-                let movieTitleHTML = `
+            // render html//
+            function buildTable() {
+                for (let i = 0; i < 3; i++) {
+                    let movieTitleHTML = `
                                   <div class="col-sm-4">
                                       <div class="card">
                                            <div class="card-body pt-2">
@@ -119,11 +114,11 @@
                                             </div>
                                        </div>
                                   </div>`;
-                $('.row-1').append(movieTitleHTML);
-            }
+                    $('.row-1').append(movieTitleHTML);
+                }
 
-            for (let i = 3; i < 6; i++) {
-                let movieTitleHTML = `
+                for (let i = 3; i < 6; i++) {
+                    let movieTitleHTML = `
                                       <div class="col-sm-4">
                                           <div class="card">
                                                <div class="card-body pt-2">
@@ -135,11 +130,11 @@
                                                 </div>
                                            </div>
                                       </div>`;
-                $('.row-2').append(movieTitleHTML);
-            }
+                    $('.row-2').append(movieTitleHTML);
+                }
 
-            for (let i = 6; i < 9; i++) {
-                let movieTitleHTML = `
+                for (let i = 6; i < 9; i++) {
+                    let movieTitleHTML = `
                                         <div class="col-sm-4">
                                               <div class="card">
                                                    <div class="card-body pt-2">
@@ -151,11 +146,11 @@
                                                     </div>
                                                </div>
                                           </div>`;
-                $('.row-3').append(movieTitleHTML);
-            }
+                    $('.row-3').append(movieTitleHTML);
+                }
 
-            for (let i = 9; i < 12; i++) {
-                let movieTitleHTML = `
+                for (let i = 9; i < 12; i++) {
+                    let movieTitleHTML = `
                                       <div class="col-sm-4">
                                           <div class="card">
                                                <div class="card-body pt-2">
@@ -167,11 +162,11 @@
                                                 </div>
                                            </div>
                                       </div>`;
-                $('.row-4').append(movieTitleHTML);
-            }
+                    $('.row-4').append(movieTitleHTML);
+                }
 
-            for (let i = 12; i < 15; i++) {
-                let movieTitleHTML = `
+                for (let i = 12; i < 15; i++) {
+                    let movieTitleHTML = `
                                           <div class="col-sm-4">
                                               <div class="card">
                                                    <div class="card-body pt-2">
@@ -183,11 +178,11 @@
                                                     </div>
                                                </div>
                                           </div>`;
-                $('.row-5').append(movieTitleHTML);
-            }
+                    $('.row-5').append(movieTitleHTML);
+                }
 
-            for (let i = 15; i < 18; i++) {
-                let movieTitleHTML = `
+                for (let i = 15; i < 18; i++) {
+                    let movieTitleHTML = `
                                       <div class="col-sm-4">
                                           <div class="card">
                                                <div class="card-body pt-2">
@@ -199,11 +194,11 @@
                                                 </div>
                                            </div>
                                       </div>`;
-                $('.row-6').append(movieTitleHTML);
-            }
+                    $('.row-6').append(movieTitleHTML);
+                }
 
-            for (let i = 18; i < 20; i++) {
-                let movieTitleHTML = `
+                for (let i = 18; i < 20; i++) {
+                    let movieTitleHTML = `
                                       <div class="col-sm-4">
                                           <div class="card">
                                                <div class="card-body pt-2">
@@ -215,38 +210,38 @@
                                                 </div>
                                            </div>
                                       </div>`;
-                $('.row-7').append(movieTitleHTML);
-            }
+                    $('.row-7').append(movieTitleHTML);
+                }
 
-            // function movieSearch(input) {
-            //     for (var i = 0; i < data.length; i++) {
-            //         let title0 = JSON.stringify(data[i].title);
-            //         let input = $('#search-term').val();
-            //         if (input === title0) {
-            //             console.log($('#search-term').val());
-            //             console.log(title0);
-            //             let movieSearchTitleHTML = `
-            //                 <div class="col-sm-4 mb-4">
-            //                      <div class="card">
-            //                         <div class="card-body">
-            //                             <h5 class="card-title">${title0}</h5>
-            //                              <p class="card-text">${data[i].description}</p>
-            //                              <p class="card-text">Date released: ${data[i].release_date}</p>
-            //                              <p class="card-text">Director: ${data[i].director}</p>
-            //                              <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
-            //                         </div>
-            //                      </div>
-            //                 </div>`;
-            //             $('.row-search').append(movieSearchTitleHTML);
-            //
-            //         }
-            //     }
-            // }
+                function movieSearch(input) {
+                    for (var i = 0; i < data.length; i++) {
+                        let title0 = JSON.stringify(data[i].title);
+                        let input = $('#search-term').val();
+                        if (input === title0) {
+                            // console.log($('#search-term').val());
+                            // console.log(title0);
+                            let movieSearchTitleHTML = `
+                            <div class="col-sm-4 mb-4">
+                                 <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${title0}</h5>
+                                         <p class="card-text">${data[i].description}</p>
+                                         <p class="card-text">Date released: ${data[i].release_date}</p>
+                                         <p class="card-text">Director: ${data[i].director}</p>
+                                         <p class="card-text">Rotten Tomatoes Score: ${data[i].rt_score}</p>
+                                    </div>
+                                 </div>
+                            </div>`;
+                            $('.row-search').append(movieSearchTitleHTML);
+                        }
+                    }
+                }
+            }
 
 
             $('#do-search').click(function (event) {
                 event.preventDefault();
-                (movieSearch("Castle in the Sky"));
+                buildTable();
             });
         }).fail(function (error) {
             console.error(error);
