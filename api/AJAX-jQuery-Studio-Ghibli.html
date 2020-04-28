@@ -212,6 +212,7 @@
                                       </div>`;
                     $('.row-7').append(movieTitleHTML);
                 }
+            }
 
                 function movieSearch(input) {
                     for (var i = 0; i < data.length; i++) {
@@ -236,12 +237,12 @@
                         }
                     }
                 }
-            }
+
 
 
             $('#do-search').click(function (event) {
                 event.preventDefault();
-                buildTable();
+                movieSearch();
             });
         }).fail(function (error) {
             console.error(error);
