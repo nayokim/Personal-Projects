@@ -602,33 +602,50 @@
 //     "Exercise 101"
 // );
 
-function countVowels(str) {
-    var vowelList = 'aeiouAEIOU';
-    var vowelCount = 0;
-    for (var i = 0; i < str.length; i++) {
-        if (vowelList.indexOf(str[i]) !== -1) {
-            vowelCount++;
-        }
+// function countVowels(str) {
+// //     var vowelList = 'aeiouAEIOU';
+// //     var vowelCount = 0;
+// //     for (var i = 0; i < str.length; i++) {
+// //         if (vowelList.indexOf(str[i]) !== -1) {
+// //             vowelCount++;
+// //         }
+// //     }
+// //     return vowelCount;
+// // }
+// //
+// // function convertNameToObject(str) {
+// //     var stringSplit = str.split(' ');
+// //     var arrayToObject = {firstName: stringSplit[0], lastName: stringSplit[1]};
+// //     return arrayToObject;
+// // }
+// // console.log(convertNameToObject("Harry Potter"));
+// //
+// // function analyzeWord(input) {
+// //
+// //     var arrayToObject = {
+// //         word: input,
+// //         numberOfLetters: input.length,
+// //         numberOfVowels:countVowels(input)
+// //     };
+// //     return arrayToObject;
+// //
+// // }
+// //
+// //     console.log(analyzeWord('codeup'));
+
+
+// Repeat a given string str (first argument) for num times (second argument). Return an empty string if num is not a positive number.
+
+function repeatStringNumTimes(str,num){
+
+    let repeatedString = "";
+    while (num > 0){
+        repeatedString += str;
+        num --
     }
-    return vowelCount;
+    return repeatedString;
 }
 
-function convertNameToObject(str) {
-    var stringSplit = str.split(' ');
-    var arrayToObject = {firstName: stringSplit[0], lastName: stringSplit[1]};
-    return arrayToObject;
-}
-console.log(convertNameToObject("Harry Potter"));
-
-function analyzeWord(input) {
-
-    var arrayToObject = {
-        word: input,
-        numberOfLetters: input.length,
-        numberOfVowels:countVowels(input)
-    };
-    return arrayToObject;
-
-}
-
-    console.log(analyzeWord('codeup'));
+console.log(repeatStringNumTimes("abc", 3));
+repeatStringNumTimes("*", 3); //***
+repeatStringNumTimes("abc", 4);// abcabcabcabc
