@@ -153,6 +153,10 @@ footer {
     height: 50px;
 }
 
+.disclaimer{
+    font-size: 0.5em;
+}
+
 .footer-bottom-links {
     border-top: 1px solid #22145e;
     font-size: 0.8em;
@@ -162,7 +166,6 @@ footer {
 
 .footer-links {
     color: #22145e;
-
 }
 
 .footer-links:hover {
