@@ -121,6 +121,17 @@ h2 {
     font-family: 'Playfair Display';
 }
 
+.products{
+    font-family:'Playfair Display'
+}
+
+#must-haves{
+    font-family:'Lato'
+}
+.explore-btn{
+    background-color:#e4cccb;
+    border: 1px solid #e4cccb;
+}
 
 .product-must-haves{
     text-align:center;
