@@ -59,6 +59,10 @@ a.navbar {
     color: #e4cccb;
 }
 
+.dropdown-menu{
+    /*border: none;*/
+}
+
 .icons {
     list-style: none;
 }
@@ -70,6 +74,14 @@ small {
 .lotion {
     margin: 5px;
     padding: 16px;
+}
+
+#nav-shop-all{
+    font-family:'lato', sans-serif;
+}
+
+#shop-all-text:hover{
+    color:#f6e0a5;
 }
 
 .supplement {
