@@ -156,11 +156,25 @@ h2 {
 }
 
 .returns{
-    height: 200px;
+    height: 400px;
     display:flex;
-    justify-content: center;
+    padding-left: 50px;
     align-content: center;
     background-color:#e0e6eb36;
+    font-family: "Playfair Display";
+}
+.returns p{
+    font-family:"Lato";
+}
+
+.return-btn{
+    background-color: #e4cccb;
+    border: 1px solid #e4cccb;
+    font-family: 'Playfair Display';
+    font-size: 1.2em;
+   padding: 10px;
+}
+.returns:hover{
 
 }
 
