@@ -635,17 +635,38 @@
 
 
 // Repeat a given string str (first argument) for num times (second argument). Return an empty string if num is not a positive number.
+//
+// function repeatStringNumTimes(str,num){
+//
+//     let repeatedString = "";
+//     while (num > 0){
+//         repeatedString += str;
+//         num --
+//     }
+//     return repeatedString;
+// }
+//
+// console.log(repeatStringNumTimes("abc", 3));
+// repeatStringNumTimes("*", 3); //***abcabcabcabc
+// repeatStringNumTimes("abc", 4);//
 
-function repeatStringNumTimes(str,num){
+function vowelsAndConsonants(s) {
 
-    let repeatedString = "";
-    while (num > 0){
-        repeatedString += str;
-        num --
+    /*First, print each vowel in  on a new line. The English vowels are a, e, i, o, and u, and each vowel must be printed in the same order as it appeared in .
+    Second, print each consonant (i.e., non-vowel) in  on a new line in the same order as it appeared in .
+    */
+
+    let vowels = 'aeiou';
+    let consonants = '';
+
+    for (var i = 0 ; i < s.length; i++){
+        if (vowels.includes(s[i])){
+            console.log(s[i]);
+        }else{
+            consonants += s[i] + '\n';
+        }
     }
-    return repeatedString;
+    return (consonants.trim());
 }
 
-console.log(repeatStringNumTimes("abc", 3));
-repeatStringNumTimes("*", 3); //***
-repeatStringNumTimes("abc", 4);// abcabcabcabc
+console.log(vowelsAndConsonants("Nayoung"));
