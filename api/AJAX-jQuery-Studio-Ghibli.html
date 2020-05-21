@@ -81,7 +81,7 @@
             console.log(movies);
 
             // render html//
-            function movieSearch() {
+            function renderMovies() {
                 for (let i = 0; i < data.length; i++) {
                     let movieTitleHTML = `
                                   <div class="col-sm-4">
@@ -98,8 +98,6 @@
                     $('.row').append(movieTitleHTML);
                 }
             }
-
-
 
             $('#do-search').click(function (event) {
                 event.preventDefault();
